@@ -39,14 +39,20 @@ class Enemy:
             print(self.name + ' has ' + str(self.lives) + ' lives')
 
 
-class Monster:
+class Monster(Enemy):
     def __init__(self):
         super().__init__('Monster', 3)
 
+    def hit(self):
+        super().hit()
 
-class Alien:
+
+class Alien(Enemy):
     def __init__(self):
         super().__init__('Alien', 5)
+
+    def hit(self):
+        super().hit()
 
 
 m = Monster()
@@ -56,3 +62,7 @@ while True:
     x = input()
     if x == 'exit':
         break
+    elif x == 'laser':
+        a.hit()
+    elif x == 'gun':
+        m.hit()
