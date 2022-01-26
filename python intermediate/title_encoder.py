@@ -12,4 +12,10 @@ file = open("/usercode/files/books.txt", "r")
 
 # your code goes here
 
+x = []
+
+for i in file:
+    x.append(i)
+    print(x)
+
 file.close()
