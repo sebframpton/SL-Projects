@@ -11,11 +11,11 @@ You can use the .split() method to get a list of words in a string.
 file = open("/usercode/files/books.txt", "r")
 
 # your code goes here
+for x in file:
+    title = x.split()
+    for a in title:
+        print(a[0], end="")
+    print()
 
-x = []
-
-for i in file:
-    x.append(i)
-    print(x)
 
 file.close()
